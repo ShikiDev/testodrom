@@ -81,6 +81,7 @@
       $.ajax({
          type:'POST',
          url:'sendFile.php',
+         dataType:'php',
          data:{email:email},
          cache:false,
          success:function(responce){
