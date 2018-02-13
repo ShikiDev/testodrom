@@ -25,6 +25,53 @@
                </div>
             </div>
          </div>
+         <div class="row">
+            <div class="col-md-12">
+               <div class="x_panel">
+                  <div class="row">
+                     <div class="col"><p>First line <mark>just for fun</mark></p></div>
+                     <div class="col"><p>Second line <del>of truth or not</del></p></div>
+                     <div class="col"><p><ins>Third line my mistake of understanding</ins></p></div>
+                     <div class="col"><p><em>Fourth line so stylish like Persona 5</em></p></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <div class="x_panel">
+                  <div class="row">
+                     <form  method="post" id="contact_form">
+                        <div class="col">
+                           <div class="input-group">
+                              <span class="input-group-addon">Email:</span>
+                              <input type="email" name="email" id="email_user">
+                           </div>
+                        </div>
+                        <div class="col">
+                           <div class="form-group row">
+                            <label for="name_user" class="col-sm-2 col-form-label">Имя</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="name_user">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                           <div class="form-group row">
+                              <button type="button" class="btn btn-primary" onclick="submitFormContact();">Отправить</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
    </body>
 </html>
+<script type="text/javascript">
+   submitFormContact(){
+      var email = $("#email_user").val();
+      console.log(email);
+   }
+</script>
