@@ -63,8 +63,11 @@
                         </div>
                      </form>
                   </div>
-                  <div class="alert alert-success" role="alert" style="display:none;" id="alertNot">
+                  <div class="alert alert-success" role="alert" style="display:none;" id="alertNotifeSuc">
                     Спасибо за регистрацию
+                  </div>
+                  <div class="alert alert-danger" role="alert" style="display:none;" id="alertNotifeFalse">
+                    Ops! I did it again.
                   </div>
                </div>
             </div>
@@ -82,7 +85,9 @@
          cache:false,
          success:function(responce){
             if(responce){
-               $('#alertNot').show();
+               $('#alertNotifeSuc').show();
+            }else{
+               $('#alertNotifeFalse').show();
             }
          }
       });
