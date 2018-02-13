@@ -63,6 +63,9 @@
                         </div>
                      </form>
                   </div>
+                  <div class="alert alert-success" role="alert" style="display:none;" id="alertNot">
+                    Спасибо за регистрацию
+                  </div>
                </div>
             </div>
          </div>
@@ -72,6 +75,16 @@
 <script type="text/javascript">
    function submitFormContact(){
       var email = $("#email_user").val();
-      console.log(email);
+      $.ajax({
+         type:'POST',
+         url:'sendFile.php',
+         data:{email:email},
+         cache:false,
+         success:function(responce){
+            if(responce){
+               $('#alertNot').show();
+            }
+         }
+      });
    }
 </script>
