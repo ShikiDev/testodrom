@@ -80,7 +80,7 @@
       var email = $("#email_user").val();
       $.ajax({
          type:'POST',
-         url:'/sendFile.php',
+         url:'../sendFile.php',
          data:{email:email},
          cache:false,
          success:function(responce){
